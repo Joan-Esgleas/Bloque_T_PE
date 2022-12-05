@@ -38,10 +38,14 @@ int main() {
         //cout << "NODO: " << res_BFS.Valor << " NUMERO DEL NODO: " << res_BFS.Numero_de_nodo << " PROFUNDIDAD: " << res_BFS.Profundidad << endl;
         //cout << "PROFUNDIDAD MAXIMA: " << Profundidad_Max << endl;
         //cout << "TIEMPO BFS = " << chrono::duration_cast<chrono::microseconds>(end_BFS - begin_BFS).count() << "μs" << endl;
-        T_BFS.push_back(chrono::duration_cast<chrono::microseconds>(end_BFS - begin_BFS).count());
+        int t = chrono::duration_cast<chrono::microseconds>(end_BFS - begin_BFS).count();
+        if(t <= 0) T_BFS.push_back(1);
+        else T_BFS.push_back(t);
         //cout << "TIEMPO DFS = " << chrono::duration_cast<chrono::microseconds>(end_DFS - begin_DFS).count() << "μs" << endl;
-        T_DFS.push_back(chrono::duration_cast<chrono::microseconds>(end_DFS - begin_DFS).count());
-        Z_COMPLX.push_back(Profundidad_Max);
+        t = chrono::duration_cast<chrono::microseconds>(end_DFS - begin_DFS).count();
+        if(t <= 0) T_DFS.push_back(1);
+        else T_DFS.push_back(t);
+        Z_COMPLX.push_back(length);
         //cout << endl;
         //cout << "Introduce la cantidad de nodos que quieres que tenga el arbol: ";
     }
