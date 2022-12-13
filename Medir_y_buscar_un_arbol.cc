@@ -56,7 +56,7 @@ int main() {
     cout << "Y_BFS <- c(";
     list<int>::iterator it = T_BFS.begin();
     while (it != (T_BFS.end())) {
-        cout << log(*(it));
+        cout << (*(it));
         if (it != (--T_BFS.end())) cout << ',';
         ++it;
     }
@@ -64,7 +64,7 @@ int main() {
     cout << "Y_DFS <- c(";
     it = T_DFS.begin();
     while (it != (T_DFS.end())) {
-        cout << log(*(it));
+        cout << (*(it));
         if (it != (--T_DFS.end())) cout << ',';
         ++it;
     }
