@@ -79,7 +79,7 @@ int main() {
     cout << ')'<< endl;
     
     cout << endl;
-    cout << "Y_DIFF <- Y_BFS - Y_DFS"<< endl;
+    cout << "Y_DIFF <- log(Y_BFS) - log(Y_DFS)"<< endl;
     cout << "qqnorm(Y_DIFF)"<< endl;
     cout << "qqline(Y_DIFF)"<< endl;
     cout << "TEST_RESULT <- t.test(Y_BFS,Y_DFS,paired = FALSE)" << endl;
